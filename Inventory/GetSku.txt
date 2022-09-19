@@ -1,0 +1,4 @@
+=CONCAT(prefix & "-",
+        IF(REGEXMATCH(DEC2HEX(dec_num),"[a-zA-Z]+"),
+            rept("0",4-len(DEC2HEX(dec_num)))&DEC2HEX(dec_num),
+            TEXT(DEC2HEX(dec_num),"0000")))
